@@ -21,7 +21,7 @@ What's new in this release:
 3. Administrative function directly from smart contract ✅
 4. Election Event currently limited to 100 Events ✅
 5. 3 States of Election Event ⚠️
-6. Voter/Member of Organization limited around 281.474.976.710.656  per organiztion,but the id more restricted to 120.000.000.000.000 ✅
+6. Voter/Member of Organization limited around 281.474.976.710.656  per organization,but the id more restricted to 120.000.000.000.000 ✅
 7. Final Election / Vote result also have its own storage that stored in blockchain ✅
 
 ### Smart Contract flow consideration ✒️:
