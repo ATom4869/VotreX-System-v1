@@ -30,5 +30,5 @@ What's new in this release:
 It could be overriden by startElection function, but it is actually still not meets my expectation.
 The actual design is to create some scheduled Election Event. In near future i will redesign this schedule flow.
 2. For the final election result, i have consideration to store this info into web3.storage,after taken Election data from smart contract
-3. ⚠️ About contract optimization, it is currently use pretty high gas cost event after using auto optimized in remix. Probably because highly relied to blockchain storage, i still working on this optimization to achieve lower gas cost in smart contract and easy to connect to front-end, keeps the true decentralized nature and may impact the performance of whole system.
+3. ⚠️ About contract optimization, it is currently use pretty high gas cost even after using auto optimized in remix. Probably because highly relied to blockchain storage, i still working on this optimization to achieve lower gas cost in smart contract and easy to connect to front-end, keeps the true decentralized nature and may impact the performance of whole system.
 
