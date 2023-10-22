@@ -3,7 +3,7 @@
 pragma solidity ^0.8.10;
 
 
-contract DVotev2{
+contract DVotev1{
 
     constructor(address initialElectionAdmin) {
         contractOwner = msg.sender;
