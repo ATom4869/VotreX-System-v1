@@ -2,7 +2,7 @@ const DVotev2 = artifacts.require("DVotev2");
 
 contract("DVotev2", async (accounts) => {
     let dVote;
-    const adminAddress = accounts[1]; // Define account number 2
+    const adminAddress = accounts[1]; // Using Account 2 in Ganache
 
   it("should create an organization", async () => {
     const electionInstance = await DVotev2.deployed();
@@ -31,10 +31,12 @@ contract("DVotev2", async (accounts) => {
   it("Test registration of an election admin", async () => {
     const adminAddress = "0xFc02D61c180A020300A674E29983A53FF8e2DBcd"
     const electionInstance = await DVotev2.deployed();
-    // Register an organization
+    // Register 2nd Organization
+    // Because as i remember per tests is redeploy the contract
+    // so it could detect the organization object and election admin could assigned into it
     await electionInstance.registerOrganization("Moroboro2", "MBR2", 0, { from: adminAddress });
 
-    // Register an election admin
+    // Register an election admin to organization
     await electionInstance.registerElectionAdmin("Moroboro2", "Arson", { from: adminAddress });
 
     // Check if the admin was registered successfully
@@ -44,7 +46,7 @@ contract("DVotev2", async (accounts) => {
     console.log(`Admin Address: ${adminAddress}`);
     console.log(`Associated Organization: ${organization[1]}`);
 
-    assert.equal(adminName, "Arson", "Admin name is incorrect");
+    assert.equal(adminName, "Myra", "Admin name is incorrect");
     assert.equal(organization[1], "Moroboro2", "Admin's organization is incorrect");
   });
 
