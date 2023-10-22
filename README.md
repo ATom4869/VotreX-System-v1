@@ -1,2 +1,2 @@
 # DU-vote-v2
-The new overhaul for my decentralized E-Voters
+The latest overhaul for my decentralized E-Voters

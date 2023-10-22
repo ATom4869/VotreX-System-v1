@@ -1,0 +1,201 @@
+﻿Diagnose log at 2023-10-21T09:14:43Z
+
+AppPath: /usr/local/bin/git-credential-manager
+InstallDir: /usr/local/share/gcm-core/
+Version: 2.3.2
+
+------------
+Diagnostic: Environment
+Skipped: False
+Success: True
+Exception: None
+Log:
+OSType: Linux
+OSVersion: Ubuntu 22.04.3 LTS
+Reading environment variables... OK
+ Variables:
+PROFILEHOME=
+GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/atomanta/.gtkrc-2.0:/home/atomanta/.config/gtkrc-2.0
+XDG_SEAT=seat0
+XDG_SESSION_ID=3
+PAM_KWALLET5_LOGIN=/run/user/1000/kwallet5.socket
+_=/usr/local/bin/git-credential-manager
+LANGUAGE=en_US:en
+XDG_RUNTIME_DIR=/run/user/1000
+XCURSOR_SIZE=24
+XDG_VTNR=1
+GTK_RC_FILES=/etc/gtk/gtkrc:/home/atomanta/.gtkrc:/home/atomanta/.config/gtkrc
+QT_SCREEN_SCALE_FACTORS=Virtual1=1.25;Virtual2=1.25;Virtual3=1.25;Virtual4=1.25;Virtual5=1.25;Virtual6=1.25;Virtual7=1.25;Virtual8=1.25;
+Z3_EXE=/home/atomanta/bin/z3
+TERM=xterm-256color
+XDG_SESSION_CLASS=user
+COLORTERM=truecolor
+SHELL=/bin/bash
+USER=atomanta
+KONSOLE_DBUS_WINDOW=/Windows/1
+XCURSOR_THEME=breeze_cursors
+OLDPWD=/home/atomanta/Documents
+LC_MEASUREMENT=id_ID.UTF-8
+KONSOLE_DBUS_SESSION=/Sessions/1
+SYSTEMD_EXEC_PID=1039
+XDG_CONFIG_DIRS=/home/atomanta/.config/kdedefaults:/etc/xdg/xdg-plasma:/etc/xdg:/usr/share/kubuntu-default-settings/kf5-settings
+BOOGIE_EXE=/home/atomanta/.dotnet/tools/boogie
+DOTNET_ROOT=/home/atomanta/.dotnet
+PWD=/home/atomanta/Documents/DU-vote-v2
+XDG_DATA_DIRS=/usr/share/plasma:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+LC_TIME=id_ID.UTF-8
+QT_ACCESSIBILITY=1
+DISPLAY=:0
+LC_PAPER=id_ID.UTF-8
+PATH=/home/atomanta/.dotnet/tools:/home/atomanta/bin:/home/atomanta/.cargo/bin:/home/atomanta/.local/bin:/home/atomanta/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+XDG_SESSION_DESKTOP=KDE
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+LC_TELEPHONE=id_ID.UTF-8
+SSH_AUTH_SOCK=/tmp/ssh-XXXXXXiqxbOm/agent.1057
+KDE_SESSION_VERSION=5
+CVC5_EXE=/home/atomanta/bin/cvc5
+GPG_AGENT_INFO=/run/user/1000/gnupg/S.gpg-agent:0:1
+LC_IDENTIFICATION=id_ID.UTF-8
+LESSOPEN=| /usr/bin/lesspipe %s
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+KONSOLE_VERSION=211203
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+HOME=/home/atomanta
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session1
+LC_MONETARY=id_ID.UTF-8
+SSH_AGENT_PID=1181
+IM_CONFIG_PHASE=1
+QT_AUTO_SCREEN_SCALE_FACTOR=0
+XDG_SESSION_TYPE=x11
+LC_NAME=id_ID.UTF-8
+DESKTOP_SESSION=plasma
+SHLVL=1
+LC_ADDRESS=id_ID.UTF-8
+LOGNAME=atomanta
+LC_NUMERIC=id_ID.UTF-8
+LANG=en_US.UTF-8
+WINDOWID=92274695
+KONSOLE_DBUS_SERVICE=:1.94
+KDE_FULL_SESSION=true
+COLORFGBG=15;0
+SHELL_SESSION_ID=feebe812331040348439b8d0ba412b8f
+KDE_SESSION_UID=1000
+LESSCLOSE=/usr/bin/lesspipe %s %s
+XAUTHORITY=/home/atomanta/.Xauthority
+KDE_APPLICATIONS_AS_SCOPE=1
+XDG_CURRENT_DESKTOP=KDE
+GIT_TRACE2_PARENT_SID=2cf6fd46-d643-4d80-9808-a233febbcc8d
+
+
+------------
+Diagnostic: File system
+Skipped: False
+Success: True
+Exception: None
+Log:
+Temporary directory is '/tmp/'...
+Checking basic file I/O...
+Writing to temporary file '/tmp/c1464eed9ba2392bfd1f8548'... OK
+Reading from temporary file '/tmp/c1464eed9ba2392bfd1f8548'... OK
+Deleting temporary file '/tmp/c1464eed9ba2392bfd1f8548'... OK
+Testing IFileSystem instance...
+UserHomePath: /home/atomanta
+UserDataDirectoryPath: /home/atomanta/.gcm
+GetCurrentDirectory(): /home/atomanta/Documents/DU-vote-v2
+
+------------
+Diagnostic: Networking
+Skipped: False
+Success: True
+Exception: None
+Log:
+Checking networking and HTTP stack...
+Creating HTTP client... OK
+IsNetworkAvailable: True
+Sending HEAD request to http://example.com...Sending HEAD request to https://example.com... OK
+ OK
+Acquiring free TCP port... OK
+Testing local HTTP loopback connections...
+Creating new HTTP listener for http://localhost:38047/... OK
+Waiting for loopback connection... OK
+Writing response... OK
+Waiting for response data... OK
+Loopback connection data OK
+
+------------
+Diagnostic: Git
+Skipped: False
+Success: True
+Exception: None
+Log:
+Getting Git version... OK
+Git version is '2.34.1'
+Locating current repository... OK
+Git repository at '/home/atomanta/Documents/DU-vote-v2/.git'
+Listing all Git configuration... OK
+Git configuration:
+file:/home/atomanta/.gitconfig	credential.helper=
+file:/home/atomanta/.gitconfig	credential.helper=/usr/local/bin/git-credential-manager
+file:/home/atomanta/.gitconfig	credential.https://dev.azure.com.usehttppath=true
+file:.git/config	core.repositoryformatversion=0
+file:.git/config	core.filemode=true
+file:.git/config	core.bare=false
+file:.git/config	core.logallrefupdates=true
+file:.git/config	remote.origin.url=https://github.com/ATom4869/DU-vote-v2.git
+file:.git/config	remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+file:.git/config	branch.stable.remote=origin
+file:.git/config	branch.stable.merge=refs/heads/stable
+
+
+------------
+Diagnostic: Credential storage
+Skipped: False
+Success: False
+Exception:
+System.Exception: No credential store has been selected.
+
+Set the GCM_CREDENTIAL_STORE environment variable or the credential.credentialStore Git configuration setting to one of the following options:
+
+  secretservice : freedesktop.org Secret Service (requires graphical interface)
+  gpg           : GNU `pass` compatible credential storage (requires GPG and `pass`)
+  cache         : Git's in-memory credential cache
+  plaintext     : store credentials in plain-text files (UNSECURE)
+
+See https://aka.ms/gcm/credstores for more information.
+
+   at GitCredentialManager.CredentialStore.EnsureBackingStore()
+   at GitCredentialManager.CredentialStore.Remove(String service, String account)
+   at GitCredentialManager.Diagnostics.CredentialStoreDiagnostic.RunInternalAsync(StringBuilder log, IList`1 additionalFiles)
+   at GitCredentialManager.Diagnostics.Diagnostic.RunAsync()
+Log:
+ICredentialStore instance is of type: CredentialStore
+Writing test credential...Deleting test credential...
+------------
+Diagnostic: Microsoft authentication (AAD/MSA)
+Skipped: False
+Success: True
+Exception: None
+Log:
+Broker is not enabled.
+Flow type is: Auto
+Gathering MSAL token cache data... OK
+CacheDirectory: /home/atomanta/.local/.IdentityService
+CacheFileName: msal.cache
+CacheFilePath: /home/atomanta/.local/.IdentityService/msal.cache
+KeyringCollection: 
+KeyringSchemaName: 
+KeyringSecretLabel: 
+KeyringAttribute1: (,)
+KeyringAttribute2: (,)
+Creating cache helper... OK
+Verifying MSAL token cache persistence... OK
+
+------------
+Diagnostic: GitHub API
+Skipped: False
+Success: True
+Exception: None
+Log:
+Using 'https://github.com/' as API target.
+Querying '/meta' endpoint... OK
+
