@@ -1,4 +1,4 @@
-# DU-vote-v2
+# DU-vote-v1
 or in complete
 # Decentralized Unified E-Voters
 The true Decentralized voting system.
