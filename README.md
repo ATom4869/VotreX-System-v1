@@ -9,12 +9,12 @@ That is still currently in deep review.
 
 
 
-# Initial Dev Package Release 
+## Initial Dev Package Release 
 What's new in this release:
 
 1. Full smart contract release
 
-Features 📢:
+### Features 📢:
 
 1. Ultra optimized contract. ⚠️
 2. Multiple Organization ready ✅
@@ -24,7 +24,7 @@ Features 📢:
 6. Voter/Member of Organization limited around 281.474.976.710.656  per organiztion,but the id more restricted to 120.000.000.000.000 ✅
 7. Final Election / Vote result also have its own storage that stored in blockchain ✅
 
-Smart Contract flow consideration ✒️:
+### Smart Contract flow consideration ✒️:
 
 1. ⚠️ Currently i still not sure for block time stamp that included currently in contract.
 It could be overriden by startElection function, but it is actually still not meets my expectation.
