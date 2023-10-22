@@ -37,7 +37,7 @@ contract("DVotev2", async (accounts) => {
     await electionInstance.registerOrganization("Moroboro2", "MBR2", 0, { from: adminAddress });
 
     // Register an election admin to organization
-    await electionInstance.registerElectionAdmin("Moroboro2", "Arson", { from: adminAddress });
+    await electionInstance.registerElectionAdmin("Moroboro2", "Myra", { from: adminAddress });
 
     // Check if the admin was registered successfully
     const adminName = await electionInstance.getAdminName(adminAddress);
