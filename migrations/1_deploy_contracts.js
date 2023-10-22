@@ -1,4 +1,4 @@
-const DVotev2 = artifacts.require("./contracts/DVotev2.sol");
+const DVotev2 = artifacts.require("./contracts/DVotev1.sol");
 
 module.exports = function (deployer) {
 
