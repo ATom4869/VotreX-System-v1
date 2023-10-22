@@ -4,7 +4,7 @@ or in complete
 The true Decentralized voting system.
 
 ** This smart contract mainly written initially on top of ethereum language and still in tought of main layer of ethereum.
-I have currently consideration for implementation into L1 or L2 Ethereum network to achieve natural performanc. Which network?
+I have currently consideration for implementation into L1 or L2 Ethereum network to achieve natural performance. Which network?
 That is still currently in deep review.
 
 
