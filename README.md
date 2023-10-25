@@ -1,6 +1,6 @@
 # DU-vote-v1
 or in complete
-# Decentralized Unified E-Voters
+# Decentralized Unified Voting System
 The true Decentralized voting system.
 
 ** This smart contract mainly written initially on top of ethereum language and still in tought of main layer of ethereum.
