@@ -15,7 +15,7 @@ contract DVotev1{
     address electionAdmins =  msg.sender;
     uint32 electionCount;
     uint32 public MAX_EVENTS = 10;
-    uint public votersCount;
+    uint48 public votersCount;
 
     mapping(address => bool) public registeredAdmin;
     mapping(address =>ElectionAdmins) public admin;
