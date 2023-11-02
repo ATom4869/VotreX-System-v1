@@ -1,0 +1,159 @@
+.wrapper {
+    display: flex;
+    height: 100vh; /* add this */
+    overflow: auto;
+}
+
+.main-content {
+    width: 100%;
+    padding: 20px;
+    margin-right: 0px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.main-content .container-box-list{
+    width: 95%;
+}
+
+.main-content .page-title {
+    font-size: 28px;
+    font-weight: bold;
+    padding-left: 25px;
+    padding-top: 10px;
+    margin-bottom: 5px;
+    margin-top: -5px;
+    font-family: "Vollkorn";
+}
+
+.container-box {
+            border-radius: 15px;
+            background-color: rgba(217, 217, 217, 0.25);
+            padding: 5px 0px 15px 15px;
+            margin: 10px 0px 10px;
+            box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.25);
+        }
+
+.main-content form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.main-content form input [type="text"]:not(.Org-input) {
+    display: block;
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 12px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-with-button {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+#metamask-button {
+    border-radius: 10px;
+    background-color: #FFAE00;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-left: 30px;
+    margin-top: 10px;
+    height: 100%;
+}
+
+.connect-btn {
+  /* existing styles */
+  transition: background-color 0.5s, transform 0.3s;
+}
+
+#metamask-button:hover {
+  background-color: #E87D00;  /* replace with the color you want */
+}
+
+.connect-btn:active {
+  transform: scale(0.9);
+}
+
+.save-btn, .cancel-btn {
+  transition: background-color 0.5s, transform 0.3s;
+}
+
+.save-btn:hover {
+  background-color: #1577B7;
+  border-color: rgba(25, 79, 115, 1);  /* replace with the color you want */
+}
+
+.cancel-btn:hover{
+    background-color: rgba(126, 6, 6, 1);
+}
+
+.save-btn:active, .cancel-btn:active {
+  transform: scale(1.1);
+}
+
+.main-content form input[type="radio"] {
+    display: inline-block;
+    margin: 10px 5px 0 0;
+}
+
+.main-content form label[for="company"],
+.main-content form label[for="organisation"] {
+    display: inline-block;
+}
+
+.wallet-input {
+    display: block;
+    width: calc(60% - 200px);
+    margin-top: 10px;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.Org-input {
+    display: block;
+    width: 61%;  /* *+1% from .wallet-input size */
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 12px;
+}
+
+.save-btn{
+    font-family: Vollkorn;
+    font-weight: regular;
+    border-block: outline;
+    border-radius: 10px;
+    background-color: #2199E8;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    height: 100%;
+
+}
+
+.cancel-btn{
+    font-family: Vollkorn;
+    font-weight: regular;
+    border-block: outline;
+    border-radius: 10px;
+    background-color: #E42222;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-left: 30px;
+    margin-top: 15px;
+    height: 100%;
+}
+

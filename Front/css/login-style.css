@@ -1,0 +1,106 @@
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: fade-in 1s;
+}
+
+html, body {
+    background-color: skyblue;
+    font-family: Vollkorn;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 2.1em;
+    font-family: "Vollkorn";
+}
+
+.card {
+    width: 400px;
+    background-color: #2199E8;
+    border-radius: 25px;
+    padding-left: 5px;
+}
+.card-text{
+    text-align: left;
+}
+
+.card-body {
+    color: #FFFFFF;
+}
+
+.input-field{
+    border-radius: 7px;
+}
+
+::placeholder { /* Most modern browsers support this */
+    font-family: 'Work Sans';
+    font-size: 14px;
+    font-weight: Bold;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-family: 'Work Sans';
+    font-size: 14px;
+    font-weight: Bold;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+    font-family: 'Work Sans';
+    font-size: 14px;
+    font-weight: Bold;
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+    font-family: 'Work Sans';
+    font-size: 14px;
+    font-weight: Bold;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    font-family: 'Work Sans';
+    font-size: 14px;
+    font-weight: Bold;
+}
+
+#connectButton {
+    background-color: #FFAE00;
+    padding: 10px;
+    width: 25ex;
+}
+
+#loginButton {
+    background-color: #167AFA;
+    color: white;
+    width: 10ex;
+}
+
+.btn-custom-rounded {
+    border-radius: 7px;
+}
+
+.btn-animate {
+    transition: transform 0.3s ease-in-out;  /* animate the transform property */
+}
+
+.btn-animate:hover {
+    transform: scale(1.1);  /* increase size to 110% when hovered over */
+}
+
+.btn-animate:active {
+    transform: scale(0.9);  /* decrease size to 90% when clicked */
+}
+
+

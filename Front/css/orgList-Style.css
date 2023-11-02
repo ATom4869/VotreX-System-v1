@@ -1,0 +1,95 @@
+#table-container {
+    background-color: #FAFAFA;
+    font-family: "Work Sans";
+    font-weight: "bold";
+    border-collapse: collapse;
+    width: 100%;
+    margin-left: 10px;
+    margin: auto;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding-left: 0px;
+}
+
+#table-header {
+    background-color: rgba(217, 217, 217, 0.20);
+    font-family: 'Work Sans';
+    font-weight: bold;
+    text-align: left;
+}
+
+.main-content {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+thead {
+    font-family: "Work Sans";
+    font-weight: "bold";
+    border-collapse: collapse;
+    width: 100%;
+    padding-left: 5px;
+}
+
+td, th {
+    border: 1px solid #dedede;
+    text-align: left;
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #dedede;
+    width: 80%;
+}
+.tambah-btn{
+    background-color: #2199E8;
+    padding: 10px;
+    text-decoration: "none";
+    font-family: "Vollkorn";
+    color: white;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-right: 30px;
+    border-radius: 15px;
+    font-size: 15px;
+    border: none;
+    transition: background-color 0.5s ease;
+}
+
+.tambah-btn:hover {
+            background-color: #1258b8;
+            border-radius: 15px;
+            font-family: 'Vollkorn';
+            font-weight: normal;
+            font-size: 15px;
+            text-decoration: none;
+            color: white;
+            border: none;
+            text-align: left;
+            transition: background-color 0.5s ease;
+        }
+
+.detail-org-btn{
+    min-width: 100px;
+    height: 40px; 
+    line-height: 40px; /* Please set value here be the same as height for vertical centering */
+    background-color: #2199E8;
+    text-align: center;
+    font-family: "Vollkorn";
+    font-weight: "bold";
+    border-radius: 10px;
+    border: none;
+}
+.remove-org-btn{
+    min-width: 100px;
+    height: 40px;
+    line-height: 40px; /* Please set value here be the same as height for vertical centering */
+    background-color: #FFAE00;
+    text-align: center;
+    font-family: "Vollkorn";
+    font-weight: "bold";
+    border-radius: 10px;
+    border: none;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/sideMenu-Style.css">
+    <link rel="stylesheet" type="text/css" href="./css/orgList-Style.css">
+    <link rel="stylesheet" type="text/css" href="./css/TitleOrgList-Style.css">
+</head>
+<body>
+    <div class="row m-0">
+        <div class="col-lg-2 p-0 nav-box d-flex flex-column align-items-center">
+            <img src="assets/images/default.png" class="profile-pic mt-3">
+            <div class="dropdown mt-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Greater Admin
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Edit Profile</a>
+                    <a class="dropdown-item" href="#">Change Password</a>
+                    <a class="dropdown-item" href="#">Logout</a>
+                </div>
+            </div>
+            <a class="navigation-button" href="greaterAdmin - Dashboard .html">Dashboard</a>
+            <a class="navigation-button" href="greaterAdmin-List-Org.html">Manajemen Instansi</a>
+            <a class="navigation-button active" href="./manajemen-pemilihan.html">Manajemen Pemilihan</a>
+        </div>
+        <div class="main-content">
+            <div class="col-lg-10 p-0">
+                <div id= "header-section" class="container-box custom-width d-flex justify-content-between">
+                    <p class="welcome-text">Daftar Pemilihan</p>
+                    <a
+                    type="button" class="tambah-btn" href="./greaterAdmin-NewElection.html">Tambah Pemilihan
+                    </a>
+                </div>
+                <div id="table-container" class="custom-width">
+                    <table onSubmit="App.createElection(); return false;" class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">ID Pemilihan</th>
+                                <th scope="col">Waktu Mulai</th>
+                                <th scope="col">Waktu Akhir</th>
+                                <th scope="col">Status Pemilihan</th>
+                                <th scope="col">Opsi</th>
+                            </tr>
+                            <td>
+                                Data 1
+                            </td>
+                            <td>
+                                Data 2
+                            </td>
+                            <td>
+                                Data 3
+                            </td>
+                            <td>
+                                Data 4
+                            </td>
+                            <td>
+                                Active
+                            </td>
+                            <td class="option-btn-group">
+                               <button type="button" class="edit-org-btn"
+                               onclick="approveElection('${election.id}')">Rubah Status
+                               </button>
+                               <button
+                               type="remove-button" class="remove-org-btn">Hapus
+                                </button>
+                            </td>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/e-vote.js"></script>
+</body>
+</html>

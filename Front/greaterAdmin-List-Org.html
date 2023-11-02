@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/sideMenu-Style.css">
+    <link rel="stylesheet" type="text/css" href="./css/orgList-Style.css">
+    <link rel="stylesheet" type="text/css" href="./css/TitleOrgList-Style.css">
+</head>
+<body>
+    <div class="row m-0">
+        <div class="col-lg-2 p-0 nav-box d-flex flex-column align-items-center">
+            <img src="assets/images/default.png" class="profile-pic mt-3">
+            <div class="dropdown mt-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Greater Admin
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Edit Profile</a>
+                    <a class="dropdown-item" href="#">Change Password</a>
+                    <a class="dropdown-item" href="#">Logout</a>
+                </div>
+            </div>
+            <a class="navigation-button" href="greaterAdmin - Dashboard .html">Dashboard</a>
+            <a class="navigation-button active" href="greaterAdmin-List-Org.html">Manajemen Instansi</a>
+            <a class="navigation-button" href="./manajemen-pemilihan.html">Manajemen Pemilihan</a>
+        </div>
+        <div class="main-content">
+            <div class="col-lg-10 p-0">
+                <div id= "header-section" class="container-box custom-width d-flex justify-content-between">
+                    <p class="welcome-text">Daftar Organisai & Admin Pemilihan</p>
+                    <a
+                    type="button" class="tambah-btn" href="./greaterAdmin-NewInstances.html">Tambah Organisasi
+                    </a>
+                </div>
+                <div id="table-container" class="custom-width">
+                    <table onSubmit="App.createOrganisation(); return false;" class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nama Organisasi</th>
+                                <th scope="col">ID Organisasi</th>
+                                <th scope="col">Alamat Dompet </th>
+                                <th scope="col">Opsi</th>
+                            </tr>
+                            <td class="option-btn-group">
+                                <button
+                                type="detail-button"
+                                class="detail-org-btn"
+                                id="detailORGBtn"
+                                data-org-id="${organisation.id}"
+                                onclick="loadElectionsList(this)">Lihat Detail
+                                </button>
+                                <button
+                                type="remove-button"
+                                class="remove-org-btn"
+                                id="hapusButton">Hapus
+                                </button>
+                            </td>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
+    <script type="text/javascript" src="./js/e-vote.js"></script>
+</body>
+</html>
