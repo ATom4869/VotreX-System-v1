@@ -12,7 +12,8 @@ That is still currently in deep review.
 ## Initial Dev Package Release 
 What's new in this release:
 
-1. Full smart contract release
+1. Full smart contract release (on initial-1 branches)
+2. Front-End Layout Release (on initial-2 branches)
 
 ### Features 📢:
 
