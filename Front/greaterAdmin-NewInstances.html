@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election Admin - Add New Instance</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/sideMenu-Style.css">
+    <link rel="stylesheet" href="./css/AddNewInstance-Style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Side Navigation Bar -->
+        <div class=" nav-bar col-lg-2 p-0 nav-box d-flex flex-column align-items-center">
+            <img src="assets/images/default.png" class="profile-pic mt-3">
+            <div class="dropdown mt-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Greater Admin
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Edit Profile</a>
+                    <a class="dropdown-item" href="#">Change Password</a>
+                    <a class="dropdown-item" href="#">Logout</a>
+                </div>
+            </div>
+            <a class="navigation-button" href="greaterAdmin - Dashboard .html">Dashboard</a>
+            <a class="navigation-button active" href="greaterAdmin-List-Org.html">Manajemen Instansi</a>
+            <a class="navigation-button" href="./manajemen-pemilihan.html">Manajemen Pemilihan</a>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="container-box-list">
+                <div class="container-box page-title">
+                    <h2 class="page-title">Tambah Instansi</h2>
+                </div>
+                <form>
+                    <div class="input-group">
+                        <label for="wallet-address">Alamat Dompet Admin</label>
+                        <div class="input-with-button">
+                            <input type="text" id="wallet-address" name="wallet-address" class="wallet-input" disabled>
+                            <button type="button" class= "connect-btn" id="metamask-button">Sambungkan MetaMask</button>
+                        </div>
+                        <small class="form-text text-muted">Silahkan gunakan tombol sambung metamask untuk mengisi form ini</small>
+                    </div>
+
+                    <label for="org-id">ID Organisasi</label>
+                    <input type="text" id="org-id" name="org-id" class="Org-input">
+
+                    <label for="org-name">Nama Organisasi</label>
+                    <input type="text" id="org-name" name="org-name" class="Org-input">
+
+                    <div class="radio-group">
+                        <label for="org-type">Jenis Organisasi</label>
+                        <input type="radio" id="company" name="org-type" value="company" onchange="handleRadioButtonChange(this.value)">
+                        <label for="company">Perusahaan</label>
+                        <input type="radio" id="organisation" name="org-type" value="organisation" onchange="handleRadioButtonChange(this.value)">
+                        <label for="organisation">Organisasi</label>
+                    </div>
+                    
+                    <button type="submit" class="save-btn">Simpan</button>
+                    <button type="button" class="cancel-btn">Batal Simpan</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <script src="ElectionAdmin-AddNewInstance.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/e-vote.js"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
+</body>
+</html>
