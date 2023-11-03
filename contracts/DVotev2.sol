@@ -3,7 +3,7 @@
 pragma solidity ^0.8.10;
 
 
-contract DVotev1{
+contract DVotev1Test1{
 
     constructor(address initialElectionAdmin) {
         contractOwner = msg.sender;
@@ -19,7 +19,7 @@ contract DVotev1{
 
     mapping(address => bool) public registeredAdmin;
     mapping(address =>ElectionAdmins) public admin;
-    mapping (uint32 => ElectionDetail) public elections;
+    mapping(uint32 => ElectionDetail) public elections;
     mapping(uint32 => ElectionResult) public electionResults;
     mapping(string => bool) public organizationList;
     mapping(address => string) public adminToOrganization;
@@ -89,23 +89,17 @@ contract DVotev1{
     function registerElectionAdmin(string memory _orgName, string memory _adminName) public {
         require(!registeredAdmin[msg.sender], "Election Admin address already registered");
 
-        // Find the organization index by its name
         uint16 orgIndex = getOrganizationIndexByName(_orgName);
 
-        // Make sure the organization exists
         require(orgIndex < organizations.length, "Organization not found");
 
-        // Retrieve the organization struct
         Organization storage org = organizations[orgIndex];
 
-        // Update the organization's electionAdminAddresses array
         address[] storage adminAddresses = org.electionAdminAddresses;
         adminAddresses.push(msg.sender);
 
-        // Set the admin's organization association
         adminToOrganization[msg.sender] = _orgName;
 
-        // Create a new ElectionAdmins struct and add it to the mapping
         ElectionAdmins memory newAdmin = ElectionAdmins({
             electionAdminAddress: msg.sender,
             orgName: _orgName,
@@ -114,19 +108,18 @@ contract DVotev1{
         });
         admin[msg.sender] = newAdmin;
 
-        // Mark the sender's address as a registered admin
         registeredAdmin[msg.sender] = true;
         org.totalMembers++;
     }
 
 
-    function getAdminOrganization() public view returns (string memory, string memory) {
-        address _adminAddress = msg.sender;
-        require(registeredAdmin[_adminAddress], "Election Admin address not registered");
-        string memory orgName = adminToOrganization[_adminAddress];
-        uint16 index = getOrganizationIndexByName(orgName);
-        return (organizations[index].orgId, organizations[index].orgName);
-    }
+    // function getAdminOrganization() public view returns (string memory, string memory) {
+    //     address _adminAddress = msg.sender;
+    //     require(registeredAdmin[_adminAddress], "Election Admin address not registered");
+    //     string memory orgName = adminToOrganization[_adminAddress];
+    //     uint16 index = getOrganizationIndexByName(orgName);
+    //     return (organizations[index].orgId, organizations[index].orgName);
+    // }
 
     function registerOrganization(
         string memory _orgName,
@@ -152,16 +145,15 @@ contract DVotev1{
             });
             organizations.push(newOrg);
             
-            // Set the initial election admin for the organization
             organizationList[_orgId] = true;
             organizationList[_orgName] = true;
     }
 
-    function getOrganization(uint index) public view returns (string memory, string memory, OrganizationType, uint48, uint16, address[] memory) {
-        require(index < organizations.length, "Index out of bounds");
-        Organization memory org = organizations[index];
-        return (org.orgName, org.orgId, org.orgType, org.totalMembers, org.electionEventCounter, org.electionAdminAddresses);
-    }
+    // function getOrganization(uint index) public view returns (string memory, string memory, OrganizationType, uint48, uint16, address[] memory) {
+    //     require(index < organizations.length, "Index out of bounds");
+    //     Organization memory org = organizations[index];
+    //     return (org.orgName, org.orgId, org.orgType, org.totalMembers, org.electionEventCounter, org.electionAdminAddresses);
+    // }
 
     function getOrganizationsCount() public view returns (uint) {
         return organizations.length;
@@ -212,7 +204,7 @@ contract DVotev1{
         require(election.status == ElectionStatus.Scheduled, "Election is not scheduled");
 
         election.status = ElectionStatus.Started;
-        election.startTime = block.timestamp; // Set the start time to the current block timestamp
+        election.startTime = block.timestamp;
     }
 
     modifier onlyAuthorized() {
@@ -227,19 +219,15 @@ contract DVotev1{
         require(election.status == ElectionStatus.Started, "Election is not started");
         require(!election.isFinished, "Election is already finished");
 
-        // Set the end time to the current block timestamp
         election.endTime = uint(block.timestamp);
         election.status = ElectionStatus.Finished;
-        election.isFinished = true; // Mark the election as finished
+        election.isFinished = true;
 
-        // Calculate total votes and determine the winner (you can add this logic)
         uint32 totalVotes = calculateTotalVotes(electionIndex);
         string memory electionWinner = determineWinner(electionIndex);
 
-        // Get the admin's name from the election admin struct
         string memory adminName = getAdminName(msg.sender);
 
-        // Store the election results
         electionResults[electionIndex] = ElectionResult(
             election.orgId,
             msg.sender, 
@@ -262,20 +250,16 @@ contract DVotev1{
     function addCandidateToElection(uint32 electionIndex, string memory _candidateName) public {
         require(electionIndex < electionCount, "Invalid election index");
 
-        // Get the organization associated with this election
         string memory orgId = elections[electionIndex].orgId;
         uint16 orgIndex = getOrganizationIndexById(orgId);
         Organization storage org = organizations[orgIndex];
 
-        // Check if the sender is an election admin for the organization
         require(isElectionAdminForOrganization(msg.sender, org.orgId), "Only election admins can add candidates");
 
         ElectionDetail storage election = elections[electionIndex];
 
-        // Check if the candidate count is within the limit defined in the election detail
         require(election.candidates.length < election.candidateList, "Candidate limit reached");
 
-        // Check that the candidate name is not empty and only contains alphabetical characters (a to z)
         require(bytes(_candidateName).length > 0, "Candidate name cannot be empty");
         require(bytes(_candidateName).length <= 16, "Candidate name should be 16 characters or less");
         require(onlyAlphabetCharacters(_candidateName), "Candidate name should only contain alphabetical characters");
@@ -299,13 +283,11 @@ contract DVotev1{
         uint16 orgIndex = getOrganizationIndexById(_orgId);
         Organization storage org = organizations[orgIndex];
 
-        // Get the election from the elections mapping using the provided index
         ElectionDetail storage election = elections[_electionIndex];
 
         require(!voters[msg.sender].isRegistered, "Voter is already registered");
         require(!isVoterRegisteredInOrg(_orgId, msg.sender), "Voter is already registered in the selected organization");
 
-        // Generate a unique 6-digit VoterID
         uint48 voterID = generateUniqueVoterID();       
 
         voters[msg.sender] = Voter({
@@ -319,7 +301,6 @@ contract DVotev1{
 
         associatedOrganizations[msg.sender] = _orgId;
 
-        // Increment the totalMembers count for the organization
         org.totalMembers++;
     }
 
@@ -330,26 +311,19 @@ contract DVotev1{
 
         ElectionDetail storage election = elections[electionIndex];
 
-        // Check if the sender is a registered voter in the organization
         require(voters[msg.sender].isRegistered, "You are not a registered voter");
-
-        // Check if the election is in the "Start" status
         require(election.status == ElectionStatus.Started, "Election is not in progress");
         string memory orgId = voters[msg.sender].associatedOrganization;
 
         require(organizationList[orgId], "You are not a registered voter in this organization");
 
-        // Check if the voter has already participated in this election
         string memory electionName = election.electionName;
         require(!hasParticipatedInElection(msg.sender, electionName), "You have already voted in this election");
 
-        // Get the candidate from the election's candidate list
         Candidate storage candidate = election.candidates[candidateID];
 
-        // Increment the vote count for the selected candidate
         candidate.CandidateVoteCount++;
 
-        // Record that the voter has participated in this election
         Voter storage voter = voters[msg.sender];
         voter.participatedElectionEvents = appendToStringArray(voter.participatedElectionEvents, electionName);
     }
@@ -448,7 +422,6 @@ contract DVotev1{
     }
     
 
-    // Helper function to check if a string contains only alphabetical characters (a to z)
     function onlyAlphabetCharacters(string memory _input) internal pure returns (bool) {
         bytes memory b = bytes(_input);
         for (uint i = 0; i < b.length; i++) {
@@ -472,12 +445,11 @@ contract DVotev1{
     }
 
     function generateUniqueVoterID() internal returns (uint48) {
-        votersCount++; // Increment the voter count
+        votersCount++;
         uint48 newVoterID = votersCount;
         require(newVoterID <= 21000000000000, "VoterID limit reached");
         require(!votersIDExists[newVoterID], "VoterID already exists");
 
-        // Mark the generated VoterID as used
         votersIDExists[newVoterID] = true;
 
         return newVoterID;
@@ -491,7 +463,7 @@ contract DVotev1{
                 return i;
             }
         }
-        return uint16(organizations.length); // Return a value that indicates "not found"
+        return uint16(organizations.length);
     }
 
     function getOrganizationIndexById(string memory _orgId) internal view returns (uint16) {
