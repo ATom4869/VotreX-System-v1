@@ -1,6 +1,4 @@
-# DU-vote-v1
-or in complete
-# Decentralized Unified Voting System
+# VotreX Voting System
 The true Decentralized voting system.
 
 ** This smart contract mainly written initially on top of ethereum language and still in tought of main layer of ethereum.
@@ -9,7 +7,7 @@ That is still currently in deep review.
 
 
 
-## Initial Dev Package Release 
+## Initial on-Dev Release 
 What's new in this release:
 
 1. Full smart contract release (on initial-1 branches)
