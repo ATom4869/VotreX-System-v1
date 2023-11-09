@@ -10,8 +10,10 @@ That is still currently in deep review.
 ## Initial on-Dev Release 
 What's new in this release:
 
-1. Full smart contract release (on initial-1 branches)
-2. Front-End Layout Release (on initial-2 branches)
+1. Full Smart Contract Restructurization
+2. Remodel Election status (introduced preparation status)
+3. Add new Pricing Fee for Registration (static pricing)
+4. Add Digital Signature for Election Result
 
 ### Features 📢:
 
