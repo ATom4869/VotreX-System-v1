@@ -33,9 +33,9 @@ What's new in this release:
 
 ### Smart Contract flow consideration ✒️ :
 
-1.1 ⚠️At this release, timestamp stamped while election started. Either from direct start, or schedule.
-1.2 For schedule election still not working at all. you still need to force start the election.
-2.1 For the final election result, i have consideration to store this info into web3.storage, after taken Election data from smart contract.
-2.2 For digital signature, it only to create hash signature, but i still not create the verify function yet.
-3. ⚠️ About contract optimization, it is currently use pretty high gas cost even after using auto optimized in remix. Probably because highly relied to blockchain storage, i still working on this optimization to achieve lower gas cost in smart contract and easy to connect to front-end, keeps the true decentralized nature and may impact the performance of whole system.
+1. ⚠️At this release, timestamp stamped while election started. Either from direct start, or schedule.
+2. For schedule election still not working at all. you still need to force start the election.
+3. For the final election result, i have consideration to store this info into web3.storage, after taken Election data from smart contract.
+4. For digital signature, it only to create hash signature, but i still not create the verify function yet.
+5. ⚠️ About contract optimization, it is currently use pretty high gas cost even after using auto optimized in remix. Probably because highly relied to blockchain storage, i still working on this optimization to achieve lower gas cost in smart contract and easy to connect to front-end, keeps the true decentralized nature and may impact the performance of whole system.
 
