@@ -30,6 +30,7 @@ What's new in this release:
 5. 3 States of Election Event, ⚠️
 6. Voter/Member of Organization limited around 281.474.976.710.656  per organization,but the id more restricted to 120.000.000.000.000, ✅
 7. Final Election / Vote result also have its own storage that stored in blockchain. ✅
+8. 1 Address per Organization for both voter and election admin
 
 ### Smart Contract flow consideration ✒️ :
 
