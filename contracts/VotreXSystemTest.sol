@@ -3,7 +3,7 @@ pragma solidity ^0.8.10;
 
 contract VotreXSystemTest{
 
-    uint256 public constant ORGANIZATION_CREATION_FEE = 50 ether;
+    uint256 internal constant ORGANIZATION_CREATION_FEE = 50 ether;
 
     constructor() {
         contractOwner = msg.sender;
