@@ -20,23 +20,25 @@ What's new in this release:
 4. Remodel Election start and end time time stamping
 5. Add new Pricing Fee for Registration (static pricing)
 6. Add Digital Signature for Election Result
+7. Add new Vote Power Mechanism
 
 ### Features 📢:
 
-1. Ultra optimized contract, ⚠️
+1. Ultra optimized contract, ✅
 2. Could be use by multiple organization separately, ✅
 3. Administrative function directly from smart contract, ✅
 4. Election Event currently limited to 100 Events, ✅
 5. 3 States of Election Event, ⚠️
-6. Voter/Member of Organization limited around 281.474.976.710.656  per organization,but the id more restricted to 120.000.000.000.000, ✅
+6. Voter/Member of Organization limited around 4500  per organization, And organizations limited to 3200 ✅
 7. Final Election / Vote result also have its own storage that stored in blockchain. ✅
-8. 1 Address per Organization for both voter and election admin
+8. 2 available organization per user. It can be 2 times as voter in 2 organization, or 1 Voter + Election Admin in different org, or 2 times as election admin in 2 different organizations.
+9. 
 
 ### Smart Contract flow consideration ✒️ :
 
-1. ⚠️At this release, timestamp stamped while election started. Either from direct start, or schedule.
-2. For schedule election still not working at all. you still need to force start the election.
-3. For the final election result, i have consideration to store this info into web3.storage, after taken Election data from smart contract.
-4. For digital signature, it only to create hash signature, but i still not create the verify function yet.
-5. ⚠️ About contract optimization, it is currently use pretty high gas cost even after using auto optimized in remix. Probably because highly relied to blockchain storage, i still working on this optimization to achieve lower gas cost in smart contract and easy to connect to front-end, keeps the true decentralized nature and may impact the performance of whole system.
+1. For schedule election still pending.
+2. For the final election result, i have consideration to store this info into web3.storage, after taken Election data from smart contract.
+3. For digital signature, it only to create hash signature, but i still not create the verify function yet.
+4. New Vote power introduced with vote power limit to 5 vote power
+5. Introduced new Tokenization scheme.
 
