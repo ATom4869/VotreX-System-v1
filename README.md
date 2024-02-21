@@ -11,7 +11,7 @@ i also have consideration to make special token that will be used for registrati
 
 
 
-## Initial on-Dev Release 
+## Release Candidate Contract Version A 
 What's new in this release:
 
 1. Full Smart Contract Restructurization
