@@ -32,7 +32,6 @@ What's new in this release:
 6. Voter/Member of Organization limited around 4500  per organization, And organizations limited to 3200 ✅
 7. Final Election / Vote result also have its own storage that stored in blockchain. ✅
 8. 2 available organization per user. It can be 2 times as voter in 2 organization, or 1 Voter + Election Admin in different org, or 2 times as election admin in 2 different organizations.
-9. 
 
 ### Smart Contract flow consideration ✒️ :
 
